@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { createQualification, getAllQualifications, getQualificationById, updateQualification, deleteQualification, deleteAllQualifications } from '../controllers/qualificationController.js';
+const router = Router();
+router.get('/', getAllQualifications);
+router.get('/:id', getQualificationById);
+router.post('/', createQualification);
+router.put('/:id', updateQualification);
+router.delete('/:id', deleteQualification);
+router.delete('/', deleteAllQualifications);
+export default router;
